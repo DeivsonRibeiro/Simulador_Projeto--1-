@@ -1,24 +1,42 @@
 ﻿async function principal() 
 {
-var s1,s2,s3,s4
+//Comece seu programa aqui
 
+	var s1,s2,s3,s4;
+ 	
+	
+// Comece seu programa aqui
 	while(true)
-	{	
-		s1 = lerSensor(1)			
-		s4 = lerSensor(4)
+	{
+		s1=lerSensor(1);
+		s2= lerSensor(2);
+		s3= lerSensor(3);
+		s4= lerSensor(4);
 		if (s4==0)
 		{
-			mostrarMensagem("Tanque Vazio")
+			mostrarMensagem("Tanque Vazio");
 		}
-		if (s1==1)
+		else
 		{
-			mostrarMensagem("Tanque Cheio")
+			if (s1 == 1)
+			{
+				mostrarMensagem("Tanque Cheio");
+			}
+			else
+			{
+
+				mostrarMensagem("Tanque pela metade");
+
+			}
+			
 		}
-			await esperar(1000);
+		await esperar(1000);
 	}
 
 
-	
+
+
+
 }
 
 /*
@@ -65,53 +83,6 @@ Esperar
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	var s1,s2,s3,s4;
- 	
-	
-// Comece seu programa aqui
-	while(true)
-	{
-		s1=lerSensor(1);
-		s2= lerSensor(2);
-		s3= lerSensor(3);
-		s4= lerSensor(4);
-		if (s4==0)
-		{
-			mostrarMensagem("Tanque Vazio");
-		}
-		else
-		{
-			if (s1 == 1)
-			{
-				mostrarMensagem("Tanque Cheio");
-			}
-			else
-			{
-
-				mostrarMensagem("Tanque pela metade");
-
-			}
-			
-		}
-		await esperar(1000);
-	}
-
-
 	
 	
 	
