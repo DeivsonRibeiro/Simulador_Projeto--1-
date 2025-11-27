@@ -1,20 +1,27 @@
 ﻿async function principal() 
 {
-var s1,s2,s3,s4
+var s1,s2,s3,s4,nivel
 
 	while(true)
 	{	
-		s1 = lerSensor(1)			
-		s4 = lerSensor(4)
-		if (s4==0)
-		{
-			mostrarMensagem("Tanque Vazio")
+	 s1 = lerSensor(1)
+	 s4 = lerSensor(4)
+	 s2 = lerSensor(2)
+	 s3 = lerSensor(3)
+	 nivel = s4*5 + s3*30 + s2*30 + s1*30;
+		
+		if(s4==0){
+			abrirValvulaEntrada()
+			mostrarMensagem("Tanque Vazio!!!  Nivel: " + nivel + "%" );
 		}
-		if (s1==1)
-		{
-			mostrarMensagem("Tanque Cheio")
+		else{
+			mostrarMensagem("Tanque pela metade!!  Nivel: " + nivel + "%" );
 		}
-			await esperar(1000);
+		if(s1==1){
+			fecharValvulaEntrada()
+			mostrarMensagem("Tanque Cheio!!!  Nivel: " + nivel + "%" );
+		}
+		await esperar(1000);
 	}
 
 
